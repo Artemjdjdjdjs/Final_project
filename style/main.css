@@ -28,36 +28,38 @@ header {
     color: #212832;
     padding: 9px 22px 9px 22px;
     border: 1px solid transparent;
-    border-radius: 15px;
+    border-radius: 5px;
 
 }
 
 .mn-name:hover {
 
-    border: 1px solid black;
+    border: 1px solid #212832;
     transition: 0.85s;
     border-radius: 8px;
 
 }
-.button-img{
+
+.button-img {
     width: 100px;
     height: 100px;
 }
 
-.banner{
+.banner {
     padding-left: 150px;
 }
-.button-full{
+
+.button-full {
     display: flex;
     align-items: center;
 }
 
-.button-img{
+.button-img {
     position: relative;
-    top:12px;
+    top: 12px;
 }
 
-.banner-name{
+.banner-name {
     font-family: Poppins;
     font-size: 20px;
     color: #DF6951;
@@ -65,21 +67,22 @@ header {
     margin-bottom: 24px;
 }
 
-.banner-desc{
-    
+.banner-desc {
+
     font-family: Volkhov;
     color: #181E4B;
     font-size: 84px;
     padding-bottom: 32px;
 }
-.banner-text{
+
+.banner-text {
     font-family: Poppins;
     font-size: 16px;
     font-weight: 500;
     color: #5E6282;
 }
 
-.button-one{
+.button-one {
     font-family: Google Sans;
     font-size: 18px;
     font-weight: 500;
@@ -91,7 +94,7 @@ header {
 }
 
 
-.button-two{
+.button-two {
     font-family: Google Sans;
     font-size: 17px;
     font-weight: 500;
@@ -99,30 +102,106 @@ header {
     color: #686D77;
 }
 
-.head-banner{
-    background-image:url("../img/Decore.png");
+.head-banner {
+    background-image: url("../img/Decore.png");
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     background-position: top right;
     margin-bottom: 120px;
-    
+
 }
 
 
-.cont-full{
+
+
+.cont-full {
     text-align: center;
 }
 
-.cont-name{
+.cont-name {
     font-size: 18px;
     font-family: Poppins;
     font-weight: 600;
-    color:#5E6282;
+    color: #5E6282;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.cont-des{
+.cont-des {
     font-family: Volkhov;
     font-weight: 700;
     color: #14183E;
+    margin-bottom: 67px;
+}
+
+.card-box {
+    display: flex;
+    gap: 20px;
+    padding-left: 148px;
+    padding-right: 200px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+}
+
+.card {
+    flex: 1;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 24px;
+    background: white;
+
+    transition: 0.35s ease;
+
+}
+
+.card-img {
+    display: block;
+    height: 100px;
+    margin: 0 auto;
+
+}
+
+.img-box {
+    margin-bottom: 29px;
+}
+
+.card-name {
+    color: #1E1D4C;
+    font-family: Open Sans;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card-text {
+    color: #5E6282;
+    font-family: Poppins;
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card:hover {
+    &:hover {
+        transform: translateY(-8px);
+
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.08);
+
+    }
+}
+
+.hidden{
+    opacity:0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
 }
