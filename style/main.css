@@ -195,13 +195,21 @@ header {
     }
 }
 
-.hidden{
-    opacity:0;
+.card {
+    opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
 }
 
-.show{
+.card.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.res{
+    margin-top: 150px;
+    text-align: center;
+    font-family: Poppins;
+    color: #5E6282;
+    font-weight: 600;
 }

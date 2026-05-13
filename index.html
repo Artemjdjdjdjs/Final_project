@@ -37,6 +37,13 @@
 </head>
 
 <body>
+
+
+
+
+
+
+
     <section class="head-banner">
         <header>
 
@@ -101,13 +108,13 @@
         </div>
 
 
-        <div class="card-box hidden show">
+        <div class="card-box show ">
             <div class="card">
                 <div class="img-box">
                     <img src="img/Group 48.png" alt="" class="card-img">
                 </div>
                 <h3 class="card-name">Calculated Weather </h3>
-                <p class="card-text">Built Wicket longer  admire do barton  vanity itself do in it.</p>
+                <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
             </div>
 
 
@@ -116,7 +123,7 @@
                     <img src="img/Group 51.png" alt="" class="card-img">
                 </div>
                 <h3 class="card-name">Best Flights</h3>
-                <p class="card-text">Engrossed listening.  Park gate sell they  west hard for the.</p>
+                <p class="card-text">Engrossed listening. Park gate sell they west hard for the.</p>
             </div>
 
 
@@ -125,7 +132,7 @@
                     <img src="img/Group 50.png" alt="" class="card-img">
                 </div>
                 <h3 class="card-name">Local Events</h3>
-                <p class="card-text">Barton vanity itself do  in it. Preferd to men it  engrossed listening. </p>
+                <p class="card-text">Barton vanity itself do in it. Preferd to men it engrossed listening. </p>
             </div>
 
 
@@ -134,29 +141,105 @@
                     <img src="img/Group 49.png" alt="" class="card-img">
                 </div>
                 <h3 class="card-name">Customization</h3>
-                <p class="card-text">We deliver outsourced  aviation services for  military customers</p>
+                <p class="card-text">We deliver outsourced aviation services for military customers</p>
             </div>
         </div>
+        <p class="res">Top Selling</p>
+
+
+
     </section>
 
+    <section class="dest">
+
+
+        <h1 class="dest-text">Top Destinations</h1>
+
+
+        <div class="dest-card-box">
+            <div class="dest-card">
+                <img src="" alt="" class="photo">
+                <div class="dest-text">
+                    <p class="tx"></p>
+                    <p class="tx"></p>
+                </div>
+                <div class="days">
+                    <img src="" alt="" class="im">
+                    <p class="ds"></p>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="dest-card">
+                <img src="" alt="" class="photo">
+                <div class="dest-text">
+                    <p class="tx"></p>
+                    <p class="tx"></p>
+                </div>
+                <div class="days">
+                    <img src="" alt="" class="im">
+                    <p class="ds"></p>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="dest-card">
+                <img src="" alt="" class="photo">
+                <div class="dest-text">
+                    <p class="tx"></p>
+                    <p class="tx"></p>
+                </div>
+                <div class="days">
+                    <img src="" alt="" class="im">
+                    <p class="ds"></p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
     <script>
-    const elements = document.querySelectorAll('.hidden');
+        const cards = document.querySelectorAll('.card');
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+
+            });
+
+        }, {
+            threshold: 0.2
+        });
+
+        cards.forEach((card) => {
+            observer.observe(card);
+        });
 
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          console.log("ok");
 
 
-        }
-      });
-    });
+
+    </script>
 
 
-    elements.forEach((el) => observer.observe(el));
-  </script>
+
+
 
 </body>
 
