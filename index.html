@@ -153,19 +153,21 @@
     <section class="dest">
 
 
-        <h1 class="dest-text">Top Destinations</h1>
+        <div class="animation-tx veb">
+        <h1 class="dest-h ">Top Destinations</h1>
+        </div>
 
 
-        <div class="dest-card-box">
-            <div class="dest-card">
-                <img src="" alt="" class="photo">
+        <div class="dest-card-box anim" id="nav-one">
+            <div class="dest-card ">
+                <img src="img/Rectangle 14.png" alt="" class="photo">
                 <div class="dest-text">
-                    <p class="tx"></p>
-                    <p class="tx"></p>
+                    <p class="tx">Rome, Italty</p>
+                    <p class="tx">$5,42k</p>
                 </div>
                 <div class="days">
-                    <img src="" alt="" class="im">
-                    <p class="ds"></p>
+                    <img src="img/Navigation.png" alt="" class="im">
+                    <p class="ds">10 Days Trip</p>
                 </div>
 
             </div>
@@ -173,15 +175,15 @@
 
 
 
-            <div class="dest-card">
-                <img src="" alt="" class="photo">
+            <div class="dest-card ">
+                <img src="img/Rectangle 14.jpg" alt="" class="photo">
                 <div class="dest-text">
-                    <p class="tx"></p>
-                    <p class="tx"></p>
+                    <p class="tx">London, UK</p>
+                    <p class="tx">$4.2k</p>
                 </div>
                 <div class="days">
-                    <img src="" alt="" class="im">
-                    <p class="ds"></p>
+                    <img src="img/Navigation.png" alt="" class="im">
+                    <p class="ds">12 Days Trip</p>
                 </div>
 
             </div>
@@ -189,21 +191,44 @@
 
 
 
-            <div class="dest-card">
-                <img src="" alt="" class="photo">
+            <div class="dest-card ">
+                <img src="img/Rectangle 14 (1).png" alt="" class="photo">
                 <div class="dest-text">
-                    <p class="tx"></p>
-                    <p class="tx"></p>
+                    <p class="tx">Full Europe</p>
+                    <p class="tx">$15k</p>
                 </div>
                 <div class="days">
-                    <img src="" alt="" class="im">
-                    <p class="ds"></p>
+                    <img src="img/Navigation.png" alt="" class="im">
+                    <p class="ds">28 Days Trip</p>
                 </div>
 
             </div>
         </div>
 
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -236,6 +261,51 @@
 
 
     </script>
+
+    <script>
+        const dests = document.querySelectorAll('.dest-card');
+
+        const observe = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('anim');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        dests.forEach((destCard) => {
+            observe.observe(destCard);
+        });
+
+
+
+
+
+    </script>
+
+<script>
+    const destH = document.querySelectorAll('.dest-h');
+
+    const destHObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('veb');
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    destH.forEach((destHElement) => {
+        destHObserver.observe(destHElement);
+    });
+</script>
 
 
 
