@@ -154,7 +154,7 @@
 
 
         <div class="animation-tx veb">
-        <h1 class="dest-h ">Top Destinations</h1>
+            <h1 class="dest-h ">Top Destinations</h1>
         </div>
 
 
@@ -205,6 +205,72 @@
             </div>
         </div>
 
+    </section>
+
+
+    <section class="trip ">
+        <div class="trip-content">
+            <div class="trip-text">
+                <h1 class="tr">Easy and Fast</h1>
+                <p class="tp">Book your next trip <br>in 3 easy steps</p>
+            </div>
+            <div class="steps">
+                <div class="st">
+                    <img src="img/Group 7.png" alt="" class="st-foto">
+                    <div>
+                        <p class="st-tx">Choose Destination</p>
+                        <p class="st-t">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.
+                        </p>
+                    </div>
+                </div>
+                <div class="st">
+                    <img src="img/Group 12.png" alt="" class="st-foto">
+                    <div>
+                        <p class="st-tx">Make Payment</p>
+                        <p class="st-t">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.
+                        </p>
+                    </div>
+                </div>
+                <div class="st">
+                    <img src="img/Group 11.png" alt="" class="st-foto">
+                    <div>
+                        <p class="st-tx">Reach Airport on Selected Date</p>
+                        <p class="st-t">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="test">
+        <div class="test-res">
+        <h5 class="ts">Testimonials</h5>
+        <img src="img/Image (2).png" alt="">
+        </div>
+        <div class="test-full">
+            <div class="about">
+                <h1 class="ab">What people say about Us.</h1>
+                <img src="img/Ellipse 25.png" alt="" class="ab-ft ht">
+                <img src="img/Ellipse 26.png" alt="" class="ab-ft ht ">
+                <img src="img/Ellipse 26.png" alt="" class="ab-ft">
+            </div>
+            <div class="koment">
+                <p class="km">“On the Windows talking painted pasture yet its express parties use. Sure last upon he
+                    same as knew next. Of believed or diverted no.”</p>
+
+                <h1 class="km-text">Mike taylor</h1>
+                <p class="km-tx ">Lahore, Pakistan</p>
+
+               <div class="result">
+                <h1 class="km-text">Chris Thomas</h1>
+                <p class="km-tx">CEO of Red Button</p>
+                </div>
+
+            </div>
+        </div>
     </section>
 
 
@@ -285,27 +351,56 @@
 
     </script>
 
-<script>
-    const destH = document.querySelectorAll('.dest-h');
+    <script>
+        const destH = document.querySelectorAll('.dest-h');
 
-    const destHObserver = new IntersectionObserver((entries) => {
+        const destHObserver = new IntersectionObserver((entries) => {
 
-        entries.forEach((entry) => {
+            entries.forEach((entry) => {
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add('veb');
-            }
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('veb');
+                }
 
+            });
+
+        }, {
+            threshold: 0.2
         });
 
-    }, {
-        threshold: 0.2
-    });
+        destH.forEach((destHElement) => {
+            destHObserver.observe(destHElement);
+        });
+    </script>
 
-    destH.forEach((destHElement) => {
-        destHObserver.observe(destHElement);
-    });
-</script>
+
+
+
+
+
+
+
+    <script>
+        const trip = document.querySelectorAll('.trip-content');
+
+        const look = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('anim-trip');
+                }
+
+            });
+
+        }, {
+            threshold: 0.2
+        });
+
+        trip.forEach((tripElement) => {
+            look.observe(tripElement);
+        });
+    </script>
 
 
 
