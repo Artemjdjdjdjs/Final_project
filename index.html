@@ -250,8 +250,8 @@
         <h5 class="ts">Testimonials</h5>
         <img src="img/Image (2).png" alt="">
         </div>
-        <div class="test-full">
-            <div class="about">
+        <div class="test-full ">
+            <div class="about ">
                 <h1 class="ab">What people say about Us.</h1>
                 <img src="img/Ellipse 25.png" alt="" class="ab-ft ht">
                 <img src="img/Ellipse 26.png" alt="" class="ab-ft ht ">
@@ -272,6 +272,56 @@
             </div>
         </div>
     </section>
+
+
+    <section class="company">
+        <img src="img/image 27.png" alt="" class="comp">
+        <img src="img/image 28.png" alt="" class="comp">
+        <img src="img/image 29.png" alt="" class="comp">
+        <img src="img/image 30.png" alt="" class="comp">
+        <img src="img/image 31.png" alt="" class="comp">
+    </section>
+
+
+    <section class="email">
+        <img src="img/Group 77.png" alt="" class="el">
+        <h1 class="em">Subscribe to get information, latest news and other <br>interesting offers about Jadoo</h1>
+        <div class="subscribe">
+            <input type="email" class="input" placeholder="Your email">
+            <a href="" class="sb">Subscribe</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ft">
+            <h1 class="ft-name">Jadoo.</h1>
+            <p class="ft-text">Book your trip in minute, get full <br>Control for much longer.</p>
+        </div>
+        <div class="ft-box">
+            <h2 class="box-name">Company</h2>
+            <p class="box-text">About</p>
+            <p class="box-text">Careers</p>
+            <p class="box-text">Mobile</p>
+        </div>
+        <div class="ft-box">
+            <h2 class="box-name">Contact</h2>
+            <p class="box-text">Help/FAQ</p>
+            <p class="box-text">Press</p>
+            <p class="box-text">Affilates</p>
+        </div>
+        <div class="ft-box">
+            <h2 class="box-name">More</h2>
+            <p class="box-text">Airlinefees</p>
+            <p class="box-text">Airline</p>
+            <p class="box-text">Low fare tips</p>
+        </div>
+        <div class="finish">
+            <img src="img/Social.png" alt="" class="fn">
+            <img src="img/Social (1).png" alt="" class="fn">
+            <img src="img/Social (2).png" alt="" class="fn">
+            <p class="fs">Discover our app</p>
+        </div>
+    </footer>
 
 
 
@@ -402,6 +452,78 @@
         });
     </script>
 
+
+
+  <script>
+    const about = document.querySelectorAll('.about');
+
+    const ab = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('about-anim');
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    about.forEach((aboutElement) => {
+        ab.observe(aboutElement);
+    });
+</script>
+
+
+  <script>
+    const koment = document.querySelectorAll('.koment');
+
+    const km = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('koment-anim');
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    koment.forEach((komentElement) => {
+        km.observe(komentElement);
+    });
+</script>
+
+
+
+
+
+<script>
+    const company = document.querySelectorAll('.company');
+
+    const cp = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('company-anim');
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    company.forEach((companyElement) => {
+        cp.observe(companyElement);
+    });
+</script>
 
 
 

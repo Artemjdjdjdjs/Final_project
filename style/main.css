@@ -386,15 +386,16 @@ header {
 .test-full {
     display: flex;
     gap: 158px;
-    
+
 }
 
-.test{
+.test {
     padding-left: 148px;
     padding-right: 200px;
+    margin-bottom: 95px;
 }
 
-.ts{
+.ts {
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 700;
@@ -402,14 +403,14 @@ header {
     color: #5E6282;
 }
 
-.ab{
+.ab {
     padding-bottom: 82px;
     font-family: Volkhov;
     font-size: 50px;
     font-weight: bold;
 }
 
-.km{
+.km {
     padding-bottom: 34px;
     font-family: Poppins;
     font-size: 16px;
@@ -417,36 +418,44 @@ header {
     color: #5E6282;
 }
 
-.km-text{
+.km-text {
     padding-bottom: 5px;
 }
 
-.km-tx{
+.km-tx {
     padding-bottom: 34px;
 }
 
-.result{
+.result {
     padding-left: 34px;
 }
 
-.test-res{
+.test-res {
     display: flex;
     gap: 470px;
     align-items: center;
 }
 
-.koment{
+.koment {
     margin-top: 10px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.km-text{
+.koment-anim {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.km-text {
     font-family: Poppins;
     font-weight: 600;
     font-size: 18px;
     color: #5E6282;
 }
 
-.km-tx{
+.km-tx {
     font-family: Poppins;
     font-weight: 500;
     font-size: 14px;
@@ -454,9 +463,139 @@ header {
 
 }
 
-.ht{
+.ht {
     padding-right: 26px;
 }
 
 
+.about {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.7s ease;
 
+}
+
+.about-anim {
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+
+.company {
+    display: flex;
+    padding-left: 148px;
+    padding-right: 200px;
+    align-items: center;
+    gap: 135px;
+    margin-bottom: 111px;
+
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+    filter: blur(8px);
+
+    transition:
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 1s ease,
+        filter 1s ease;
+}
+
+/* Клас при появі */
+.company-anim {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.em {
+    text-align: center;
+    margin-bottom: 74px;
+    font-family: Poppins;
+    font-size:33px;
+    font-weight:600 ;
+    color: #5E6282;
+}
+
+.input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 65px;
+    padding-right: 210px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+}
+
+.email{
+    padding-bottom: 144px;
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    padding-left: 339px;
+    padding-right: 293px;
+    gap: 100px;
+}
+
+.sb {
+    background-color: #FF946D;
+    padding: 23px 50px;
+    border-radius: 10px;
+    font-family: Open sans;
+    font-size:17px;
+    font-weight:600 ;
+    color: #FFFFFF;
+    text-decoration: none;
+    
+}
+
+.el {
+    position: relative;
+    left: 1400px;
+}
+
+
+footer{
+    display: flex;
+    padding-left: 148px;
+    padding-right: 200px;
+    gap: 145px;
+
+}
+
+.ft-name{
+    margin-bottom: 17px;
+    font-family: Poppins;
+    font-size: 44px;
+    font-weight: 400;
+    color: #181E4B;
+    line-height: 37px;
+}
+
+.ft-text{
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 400;
+    color: #5E6282;
+}
+
+.box-name{
+    margin-bottom: 34px;
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.box-text{
+    margin-bottom: 17px;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.fs{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+
+}
