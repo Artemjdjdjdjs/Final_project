@@ -22,6 +22,10 @@ header {
 
 }
 
+.mn {
+    white-space: nowrap;
+}
+
 .mn-name {
     font-family: Google Sans;
     font-weight: 500;
@@ -243,6 +247,7 @@ header {
     padding-left: 148px;
     padding-right: 200px;
     gap: 65px;
+    justify-content: space-around;
 
 }
 
@@ -597,5 +602,4 @@ footer{
     font-family: Poppins;
     font-size: 20px;
     font-weight: 400;
-
 }
